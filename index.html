@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Student Registration</h1>
+        <p>Welcome to our Student Registration Page ....</p>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <div class="search">
+            <input type="text" placeholder="Search...">
+        </div>
+    </nav>
+    <div class="container">
+        <div class="form-card">
+            <h2>Enter your details below:</h2>
+            <form>
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Skills</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="skills" value="html"> HTML</label>
+                        <label><input type="checkbox" name="skills" value="css"> CSS</label>
+                        <label><input type="checkbox" name="skills" value="javascript"> JavaScript</label>
+                        <label><input type="checkbox" name="skills" value="python"> Python Course</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="course-select">Preferred Program</label>
+                    <select id="course-select">
+                        <option value="java-fullstack">Java Full Stack</option>
+                        <option value="mern-fullstack">MERN Full Stack</option>
+                        <option value="python-fullstack">Python Full Stack</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" rows="3" placeholder="Enter your address"></textarea>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <h3>Popular Courses</h3>
+        <p>Java Full Stack Development &bull; Python Full Stack Development &bull; MERN Full Stack Development</p>
+        <p>2026 Student Registration Page | Contact: info@studentregistration.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
