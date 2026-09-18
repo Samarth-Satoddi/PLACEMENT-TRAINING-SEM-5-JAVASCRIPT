@@ -1,22 +1,21 @@
 import "./App.css";
-import Hero from "./assets/component/hero";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import EventSection from "./components/EventSection";
+import Footer from "./components/Footer";
 
 function App() {
-  const trainername = "SAMARTH SATODDI";
-  const trainingday = 10;
-
   return (
-    <main className="App">
-      <Hero />
-      <section className="App-header">
-        <p className="daylabel">React day</p>
-        <br />
-        <h2 className="title">College course explore</h2>
-        <p>Trainer: {trainername}</p>
-        <p>Training Day: {trainingday}</p>
-        <p>used PYTHON, REACT, LANGCHAIN</p>
-      </section>
-    </main>
+    <div className="app-shell">
+      <Navbar />
+
+      <main id="home">
+        <Hero />
+        <EventSection />
+      </main>
+
+      <Footer />
+    </div>
   );
 }
 
