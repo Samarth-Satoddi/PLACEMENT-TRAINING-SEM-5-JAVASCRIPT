@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero({ title, description }) {
   return (
     <section className="hero">
@@ -7,9 +9,9 @@ function Hero({ title, description }) {
         {description ||
           "Find workshops, sports activities, and club meetings designed for every student to explore and connect."}
       </p>
-      <a className="hero-button" href="#events">
+      <Link className="hero-button" to="/events">
         Explore Events
-      </a>
+      </Link>
     </section>
   );
 }

@@ -1,12 +1,28 @@
+import { NavLink } from "react-router";
+
 function Navbar() {
+  function getNavLinkClass({ isActive }) {
+    return isActive ? "nav-link active-link" : "nav-link";
+  }
+
   return (
     <nav className="navbar">
-      <h2>Campus Connect</h2>
+      <NavLink className="brand-name" to="/">
+        Campus Connect
+      </NavLink>
 
       <div className="nav-links">
-        <a href="#home">Home</a>
-        <a href="#events">Events</a>
-        <a href="#about">About</a>
+        <NavLink className={getNavLinkClass} to="/">
+          Home
+        </NavLink>
+
+        <NavLink className={getNavLinkClass} to="/events">
+          Events
+        </NavLink>
+
+        <NavLink className={getNavLinkClass} to="/about">
+          About
+        </NavLink>
       </div>
     </nav>
   );
