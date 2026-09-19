@@ -151,6 +151,21 @@ button {
   font-weight: bold;
 }
 
+.event-description {
+  margin: 0 0 18px;
+}
+
+.event-details {
+  margin-top: auto;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.event-details p {
+  margin: 0;
+}
+
 .event-card button {
   margin-top: auto;
   padding: 10px 14px;
