@@ -1,47 +1,34 @@
 import EventCard from "./EventCard";
 
-function EventSection() {
-  const events = [
-    {
-      title: "MERN Stack Workshop",
-      date: "25 September 2026",
-      time: "10:00 AM",
-      location: "Computer Lab 1",
-      category: "Technology",
-      description:
-        "Learn the basics of MongoDB, Express, React, and Node.js through a practical workshop.",
-    },
-    {
-      title: "Startup Pitch Fest",
-      date: "29 September 2026",
-      time: "1:30 PM",
-      location: "Innovation Hub",
-      category: "Innovation",
-      description:
-        "Meet student founders, mentors, and investors in a live pitching showcase featuring creative startup ideas.",
-    },
-    {
-      title: "Campus Fest Night",
-      date: "03 October 2026",
-      time: "6:00 PM",
-      location: "Open Air Stage",
-      category: "Culture",
-      description:
-        "Enjoy music, dance, art, and vibrant performances celebrating the creativity of our student community.",
-    },
-  ];
-
+function EventSection({ events = [] }) {
   return (
     <section id="events" className="events-section">
-      <p className="section-label">Upcoming Activities</p>
+      <div className="section-heading">
+        <div>
+          <p className="section-label">Upcoming Activities</p>
+          <h2>Explore Campus Events</h2>
+        </div>
 
-      <h2>Explore Campus Events</h2>
-
-      <div className="event-grid">
-        {events.map((event) => (
-          <EventCard key={event.title} {...event} />
-        ))}
+        <p className="events-count">{events.length} events available</p>
       </div>
+
+      {events.length === 0 ? (
+        <p className="no-events">No events are available right now.</p>
+      ) : (
+        <div className="event-grid">
+          {events.map((event) => (
+            <EventCard
+              key={event.id}
+              title={event.title}
+              category={event.category}
+              date={event.date}
+              time={event.time}
+              location={event.location}
+              description={event.description}
+            />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
